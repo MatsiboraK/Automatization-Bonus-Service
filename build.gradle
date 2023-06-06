@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+sourceCompatibility = 11 //С какай версией JDK работаем
+compileJava.options.encoding = "UTF-8" //Какие кодировки используются, чтобы не было проблем с кириллицей
+compileTestJava.options.encoding = "UTF-8" //Для компиляции тестов
+
+group 'ru.netology'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+}
+
+test {
+    useJUnitPlatform()
+}
